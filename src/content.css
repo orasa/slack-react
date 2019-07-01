@@ -4,7 +4,9 @@
   grid-template-columns: 1fr;
   padding: 30px;
   width: auto;
+  height: 100vh;
   /* width: 1000px!important;  */
+  border-radius: 5px;
 
 }
 

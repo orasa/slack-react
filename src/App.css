@@ -11,7 +11,7 @@ html, body {
   display: grid;
   /* set sidebar for 200px and the rest is taking all the rest*/
   /* grid-template-columns: 1fr 4fr; */
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 4fr;
 
-  padding: 80px;
+  padding: 10px;
 }
