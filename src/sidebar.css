@@ -1,0 +1,21 @@
+#sidebar {
+  display: grid;
+  grid-template-columns: 200px auto;
+  /* grid-template-columns: 1fr; */
+  background: white;
+  padding: 10px;
+
+}
+.box {
+  background: lightblue;
+  padding: 20px;
+}
+
+ #sidebar li {
+  list-style-type: none;
+}
+ #sidebar li:hover {
+
+ }
+ #sidebar li.active {
+}

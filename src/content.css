@@ -1,0 +1,44 @@
+#content{
+  background: #f8f8f8;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 30px;
+  width: auto;
+  /* width: 1000px!important;  */
+
+}
+
+#content #message{
+ padding: 20px;
+ height: calc(100vh -80px);
+ /* scorll when content over the box */
+ overflow-y: auto;
+}
+
+#content #newMessage{
+  background: yellow;
+}
+
+#content .message{
+  margin-top: 10px;
+  margin-left: 5px;
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px
+}
+
+.message .author{
+  color: black;
+  font-size: 16px;
+  font-weight: 50px
+}
+.message .date{
+  color: grey;
+  font-size: 15px;
+}
+.message .body{
+  font-size: 14px;
+}
