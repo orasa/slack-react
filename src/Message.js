@@ -1,22 +1,24 @@
 import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import  Content from "./Content";
+import './Content.css'
+
 
 
 
 class Message extends Component {
 
-  // state:  ={
-  //   message: this.props.message
-  // }
+  state = {
+          messages: this.props.message
+        }
 
   render() {
+
     return (
-      <div className="message">
-         <span className="author">{this.state.message.auther}</span>
-         <span className="date">{this.state.message.date}</span>
-         <div className="body">{this.state.message.body}</div>
-      </div>
+
+    <div className="messages">
+     <span className="author"> {this.state.messages.author}</span>
+     <span className="date"> {this.state.messages.date} </span>
+     <div className="body"> {this.state.messages.body} </div>
+    </div>
 
       )
     }
