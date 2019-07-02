@@ -1,66 +1,48 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import "./content.css";
 
-//data
-//Functions
-//render html
+import "./Content.css";
+import Message from './Message'
+
 
 class Content extends Component {
-  //return something
-  //for multiple line the return needed to be wrap in ()
+  state = { messages:  [
+    {
+      id: 1,
+    auther: "Tony Russo",
+    date: '2 July 2019 - 9.09am',
+    body: 'Hellow world'
+  },
+
+      {
+         id: 2,
+      auther: "Orasa O'Neal",
+      date: '1 July 2019 - 9.09am',
+      body: 'Hey dude1'
+
+      }, {
+        id: 3,
+      auther: "Tony Russo",
+      date: '2 July 2019 - 9.09am',
+      body: 'Blah blah'
+      }
+
+
+        ]
+
+  }
 
   render() {
     return (
       <div>
         <div id="content">
           <div id="messages">
-            <div className="message">
-              <span className="author">Orasa O'Neal</span>
-              <span className="date">1 Jul 2019 - 10:55</span>
-              <div className="body">Good Moring Sexy Coder!</div>
-            </div>
+          {
+            this.state.messages.map((m) => {
+              return <Message message={m} key={m.id} />
+            })
+          }
 
-            <div className="message">
-              <span className="author">Orasa O'Neal</span>
-              <span className="date">1 Jul 2019 - 10:55</span>
-              <div className="body">blah bla blah</div>
-            </div>
-
-            <div className="message">
-              <span className="author">Orasa O'Neal</span>
-              <span className="date">1 Jul 2019 - 10:55</span>
-              <div className="body">
-                {" "}
-                simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. It has survived
-                not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged. It was popularised
-                i
-              </div>
-            </div>
-
-            <div className="input-group mb-3">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Recipient's username"
-                aria-label="Recipient's username"
-                aria-describedby="button-addon2"
-              />
-              <div className="input-group-append">
-                <button
-                  className="btn btn-outline-secondary"
-                  type="button"
-                  id="button-addon2"
-                >
-                  Button
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </div>

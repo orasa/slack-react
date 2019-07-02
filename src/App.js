@@ -1,24 +1,18 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
-import Sidebar from './sidebar'
-import Content from './Content'
+import Sidebar from './Sidebar'
+import Content from './Content' // import child component into parents and it will inherit elment on parent
 
-//data
-//Functions
-//render html
 
 class App extends Component {
 
-  //return something
-  //for multiple line the return needed to be wrap in ()
-
-  render(){
+  render() {
 
   return (
      <div id="wrap">
       <Sidebar/>
-       <Content/>
+      <Content/>
 
       </div>
       )
