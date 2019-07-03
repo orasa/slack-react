@@ -27,14 +27,25 @@ class Content extends Component {
       author: "Tony Russo",
       date: '2 July 2019 - 9.09am',
       body: 'Blah blah'
-      }
-    ]
+      }]
   }
-  //function
-  createMessage = (e) => {
+  //function add param text, to recieve the in put from  send button,
+  createMessage = (e,text) => {
     e.preventDefault()
-      console.log(this.state.text);
+      console.log(text);
+      let message = {
+        id: 7,
+        author: "Nui",
+        date: "July 3, 2019",
+        body: text
+      }
+      let messages = this.state.messages
+      messages.push(message)
+      this.setState({messages})
   }
+
+
+
 
   render() {
     return (

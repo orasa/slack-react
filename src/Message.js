@@ -10,11 +10,12 @@ class Message extends Component {
           messages: this.props.message
         }
 
+ //pass as props
   render() {
 
     return (
 
-    <div className="messages">
+    <div className="message">
      <span className="author"> {this.state.messages.author}</span>
      <span className="date"> {this.state.messages.date} </span>
      <div className="body"> {this.state.messages.body} </div>
